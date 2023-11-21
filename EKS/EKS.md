@@ -52,3 +52,19 @@ nodeGroups:
 eksctl create cluster -f medium2nodesCluster.yaml
 ````
 
+---
+
+# ECR
+
+Push image to ECR
+```shell
+aws ecr get-login-password --region <AWS region> | docker login --username AWS --password-stdin <ECR repo>
+docker tag <image id> <ECR repo>/<image name>:<image version>
+docker push <ECR repo>/<image name>:<image version>
+```
+
+For helm charts
+```shell
+aws ecr get-login-password --region <AWS region> | docker login --username AWS --password-stdin <ECR repo>
+helm push <char name>-<version>.tgz oci://<ECR repo>
+```
