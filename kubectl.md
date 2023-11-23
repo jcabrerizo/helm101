@@ -24,5 +24,5 @@ kubectl config get-contexts
 
 Select context
 ```shell
-kubectl config use-context docker-desktop
+kubectl config use-context <context name>
 ```

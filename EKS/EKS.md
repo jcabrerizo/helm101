@@ -67,6 +67,11 @@ Testing a config file using [`--dry-run`](https://eksctl.io/usage/dry-run/):
 eksctl create cluster -f 2_large_node_cluster.yaml --dry-run 
 ```
 
+Configure kubectl
+```shell
+aws eks update-kubeconfig --region <region> --name <eks_cluster_name>
+```
+
 ---
 
 # ECR
@@ -80,6 +85,6 @@ docker push <ECR repo>/<image name>:<image version>
 
 For helm charts
 ```shell
-aws ecr get-login-password --region <AWS region> | docker login --username AWS --password-stdin <ECR repo>
+aws ecr get-login-password --region <AWS region> | helm registry login --username AWS --password-stdin <ECR repo>
 helm push <char name>-<version>.tgz oci://<ECR repo>
 ```
