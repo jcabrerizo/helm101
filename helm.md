@@ -84,6 +84,11 @@ helm list -a
 helm uninstall helmDir
 ```
 
+Get release notes of a 
+```shell
+helm get notes <release_name>
+```
+
 ### Validating helm chart
 Interaction with the actual k8s cluster
 ```shell

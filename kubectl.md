@@ -26,3 +26,8 @@ Select context
 ```shell
 kubectl config use-context <context name>
 ```
+
+List supported API resources and abbreviations on the server
+```shell
+kubectl api-resources -o wide
+```
