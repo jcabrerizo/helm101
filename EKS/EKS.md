@@ -27,6 +27,16 @@ For forcing a specific version on k8s:
 eksctl create cluster --version=1.24
 ```
 
+Listing existing clusters
+```shell
+aws eks list-clusters
+```
+
+Describe cluster shows endpoint and VPC and internet access exposure
+```shell
+aws eks describe-cluster --name <cluster name>
+```
+
 Or for changing default behaviour a yaml config file can be used:
 
 [medium2nodesCluster.yaml](./2_large_node_cluster.yaml):
