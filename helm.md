@@ -4,9 +4,15 @@ Helm learning notes and POCs
 
 > **TODO**
 >
-> - [ ] What is `appVersion`
-> - [ ] And also `apiVersions`
-> - [ ] Alternatives to `apiVersions` and `lookup`
+> - [x] What is `appVersion`:  Version of the deployed application using helm, eg: WordPress, independent of the helm version. [Docs](https://helm.sh/docs/topics/charts/#the-appversion-field)
+> - [x] What is `apiVersions`: [Docs](https://helm.sh/docs/chart_template_guide/builtin_objects/)
+> 
+>   Capabilities: This provides information about what capabilities the Kubernetes cluster supports.
+> 
+>   Capabilities.APIVersions is a set of versions.
+> 
+>   Capabilities.APIVersions.Has $version indicates whether a version (e.g., batch/v1) or resource (e.g., apps/v1/Deployment) is available on the cluster.
+> - [ ] Alternatives to `lookup`. [Docs](https://helm.sh/docs/chart_template_guide/function_list/#lookup)
 
 ## Links
 
@@ -19,12 +25,12 @@ https://www.youtube.com/watch?v=DQk8HOVlumI&t=741s
 
 ## Setup environment
 
-### Install `microk8s`
+### Install MicroK8s
 
 sudo snap install microk8s --classic --channel=1.28
 Needing to run `newgrp microk8s` for load the rights
 
-### Install `helm`
+### Install Helm
 
 https://helm.sh/docs/intro/install/
 https://github.com/helm/helm/releases/tag/v3.8.1
