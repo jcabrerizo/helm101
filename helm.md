@@ -1,6 +1,17 @@
 # Helm notes
 
-Helm learning notes and POC
+Helm learning notes and POCs
+
+> **TODO**
+>
+> - [ ] What is `appVersion`
+> - [ ] And also `apiVersions`
+> - [ ] Alternatives to `apiVersions` and `lookup`
+
+## Links
+
+* Play ground: https://helm-playground.com/
+* [Template function list](https://helm.sh/docs/chart_template_guide/function_list/)
 
 ## Resources
 
@@ -15,12 +26,12 @@ Needing to run `newgrp microk8s` for load the rights
 
 ### Install `helm`
 
-<https://helm.sh/docs/intro/install/>
-<https://github.com/helm/helm/releases/tag/v3.8.1>
+https://helm.sh/docs/intro/install/
+https://github.com/helm/helm/releases/tag/v3.8.1
 
 ### Install `kubectl`
 
-<https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/>
+https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 
 ## Helm 101
 
@@ -80,21 +91,37 @@ List all
 ```shell
 helm list -a
 ```
+or only with `kubctl`
 ```shell
-helm uninstall helmDir
+kubectl api-resources --verbs=list -o name | xargs -n 1 kubectl get --show-kind -l app.kubernetes.io/instance=$RELEASE_NAME --ignore-not-found -o name
+```
+
+Uninstall release
+```shell
+helm uninstall $RELEASE_NAME
 ```
 
 Get release notes of a 
 ```shell
-helm get notes <release_name>
+helm get notes $RELEASE_NAME
+```
+
+Upgrade release, after modifying the chart code
+```shell
+helm upgrade example $HELM_DIR
+```
+
+List release story
+```shell
+helm history $RELEASE_NAME
 ```
 
 ### Validating helm chart
 Interaction with the actual k8s cluster
 ```shell
-helm install releaseName –debug –dry-run helmDir
+helm install releaseName –debug –dry-run $HELM_DIR
 ```
-Validating only the ymls
+Validating only the YAMLs
 ```shell
 helm template
 ```

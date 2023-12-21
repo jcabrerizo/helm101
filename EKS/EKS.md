@@ -34,7 +34,7 @@ aws eks list-clusters
 
 Describe cluster shows endpoint and VPC and internet access exposure
 ```shell
-aws eks describe-cluster --name <cluster name>
+aws eks describe-cluster --name $CLUSTER_NAME
 ```
 
 Or for changing default behaviour a yaml config file can be used:
@@ -79,7 +79,7 @@ eksctl create cluster -f 2_large_node_cluster.yaml --dry-run
 
 Configure kubectl
 ```shell
-aws eks update-kubeconfig --region <region> --name <eks_cluster_name>
+aws eks update-kubeconfig --region $AWS_REGION --name $EKS_CLUSTER_NAME
 ```
 
 ---
@@ -88,13 +88,13 @@ aws eks update-kubeconfig --region <region> --name <eks_cluster_name>
 
 Push image to ECR
 ```shell
-aws ecr get-login-password --region <AWS region> | docker login --username AWS --password-stdin <ECR repo>
-docker tag <image id> <ECR repo>/<image name>:<image version>
-docker push <ECR repo>/<image name>:<image version>
+aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $ECR_REPO
+docker tag $DOCKER_IMAGE_ID ${ECR_REPO}/${IMAGE_NAME}:${IMAGE_NAME}
+docker push $ECR_REPO/$IMAGE_NAME:${IMAGE_NAME}
 ```
 
 For helm charts
 ```shell
-aws ecr get-login-password --region <AWS region> | helm registry login --username AWS --password-stdin <ECR repo>
-helm push <char name>-<version>.tgz oci://<ECR repo>
+aws ecr get-login-password --region $AWS_REGION | helm registry login --username AWS --password-stdin $ECR_REPO
+helm push ${CHAR_NAME}-${CHAR_VERSION}.tgz oci://${ECR_REPO}
 ```

@@ -7,12 +7,12 @@ kubectl get pods -A
 
 Describe pod
 ```shell
-kubectl describe pod <pod_name>
+kubectl describe pod $POD_NAME
 ```
 
 See pod logs
 ```shell
-kubectl logs <pod_name>
+kubectl logs $POD_NAME
 ```
 
 ##  Manage context
@@ -24,10 +24,15 @@ kubectl config get-contexts
 
 Select context
 ```shell
-kubectl config use-context <context name>
+kubectl config use-context $CONTEXT_NAME
 ```
 
 List supported API resources and abbreviations on the server
 ```shell
 kubectl api-resources -o wide
+```
+
+List resources within a helm release:
+```shell
+kubectl api-resources --verbs=list -o name | xargs -n 1 kubectl get --show-kind -l app.kubernetes.io/instance=${$RELEASE_NAME} --ignore-not-found -o name
 ```
