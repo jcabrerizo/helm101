@@ -15,6 +15,11 @@ See pod logs
 kubectl logs $POD_NAME
 ```
 
+To look for errors in the logs of the previous pod that crashed:
+```shell
+kubectl logs --previous YOUR-POD_NAME
+```
+
 ##  Manage context
 
 List existing context
