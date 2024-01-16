@@ -127,11 +127,18 @@ Interaction with the actual k8s cluster
 ```shell
 helm install releaseName –debug –dry-run $HELM_DIR
 ```
+
 Validating only the YAMLs
 ```shell
 helm template
 ```
+
 Run linter
 ```shell
 helm lint
+```
+
+Show helm environment variables
+```shell
+helm env
 ```
