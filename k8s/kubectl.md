@@ -10,6 +10,17 @@ Describe pod
 kubectl describe pod $POD_NAME
 ```
 
+Delete pod
+```shell
+kubectl delete pod $POD_NAME
+```
+or by referencing the manifest
+```shell
+kubectl delete pod -f $MANIFEST.yaml
+```
+
+
+
 See pod logs
 ```shell
 kubectl logs $POD_NAME
