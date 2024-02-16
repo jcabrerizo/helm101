@@ -19,8 +19,6 @@ or by referencing the manifest
 kubectl delete pod -f $MANIFEST.yaml
 ```
 
-
-
 See pod logs
 ```shell
 kubectl logs $POD_NAME
@@ -42,6 +40,12 @@ Select context
 ```shell
 kubectl config use-context $CONTEXT_NAME
 ```
+
+Set context namespace
+```shell
+kubectl config set-context $CONTEXT_NAME --namespace=$NAMESPACE
+```
+for unset use `--namespace=''`
 
 List supported API resources and abbreviations on the server
 ```shell

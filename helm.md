@@ -25,11 +25,6 @@ https://www.youtube.com/watch?v=DQk8HOVlumI&t=741s
 
 ## Setup environment
 
-### Install MicroK8s
-
-sudo snap install microk8s --classic --channel=1.28
-Needing to run `newgrp microk8s` for load the rights
-
 ### Install Helm
 
 https://helm.sh/docs/intro/install/

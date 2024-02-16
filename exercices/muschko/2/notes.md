@@ -1,0 +1,1 @@
+7. for running a a command inside a pod need to use the `/bin/sh -c $COMMAND_AND_ARGUMENTS` syntax
