@@ -1,5 +1,8 @@
 # Kubernetes and helm notes
 
-* [AWS EKS + `eksctl`](./EKS/EKS.md)
-* [`helm`](./helm.md)
-* [`kubectl`](./kubectl.md)
+* [AWS: ECR & EKS + `eksctl`](aws/)
+* [Helm](./helm.md)
+* [Kubernetes & kubectl](./k8s/)
+
+## Training
+1. [Muschko CKAD book](exercices/muschko)
