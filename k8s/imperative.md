@@ -13,6 +13,12 @@ It deletes the objects on the namespace too
 kubectl delete namespace $NAMESPACE
 ```
 
+## Secrets
+
+```shell
+kubectl create secret generic $SECRET_NAME --from-literal=${SECRET_KEY}=${SECRET_VALUE} -n $NAMESPACE
+```
+
 ## Pods
 
 ### Create pod
@@ -53,4 +59,13 @@ kubectl run $NODE_NAME --image=busybox -it --rm --restart=Never -- wget -O- $TAR
 
 
 ## Run command in a existing pod 
+
+Open a interactive shell
+```shell
 kubectl exec -it $POD_NAME -- /bin/sh
+```
+
+Run an isolated commandF
+```shell
+kubectl exec --stdin --tty $POD_NAME -- $COMMAND  
+```
