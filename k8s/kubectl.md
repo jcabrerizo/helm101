@@ -14,19 +14,31 @@ Delete pod
 ```shell
 kubectl delete pod $POD_NAME
 ```
+
 or by referencing the manifest
 ```shell
 kubectl delete pod -f $MANIFEST.yaml
 ```
 
-See pod logs
+Force delete:
+```shell
+kubectl delete pod $POD_NAME --grace-period=0 --force
+```
+
+## Pod logs
+
 ```shell
 kubectl logs $POD_NAME
 ```
 
 To look for errors in the logs of the previous pod that crashed:
 ```shell
-kubectl logs --previous YOUR-POD_NAME
+kubectl logs --previous $POD_NAME
+```
+
+Logs by container inside a pod
+```shell
+kubectl logs $POD_NAME -c $CONTAINER_NAME
 ```
 
 ##  Manage context

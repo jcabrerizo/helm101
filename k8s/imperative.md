@@ -69,3 +69,5 @@ Run an isolated commandF
 ```shell
 kubectl exec --stdin --tty $POD_NAME -- $COMMAND  
 ```
+
+For multi-container pods, the flag `-c $CONTAINER_NAME` can be used for target an specific container within the pod
