@@ -6,3 +6,7 @@
 
 ## Training
 1. [Muschko CKAD book](exercices/muschko)
+
+## To review
+- [ ] Probes
+- [ ] Pod command/arg syntax
