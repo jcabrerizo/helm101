@@ -16,13 +16,12 @@ spec:
     name: complex-pod
     ports:
     - containerPort: 80
-    resources: {}
-  dnsPolicy: ClusterFirst
-  restartPolicy: Always
   initContainers:
     - name: initializer 
       image: busybox
       command: ['/bin/sh', '-c', 'wget -O- google.com']
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
 ```
 
 Check the logs:
@@ -31,4 +30,41 @@ POD_NAME=composed
 INIT_CONTAINER_NAME=initializer
 kubectl logs --previous $POD_NAME
 kubectl logs $POD_NAME -c $INIT_CONTAINER_NAME
+```
+
+## Probes
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: web-server
+  name: web-server
+spec:
+  containers:
+  - image: nginx
+    name: web-server
+    ports:
+    - containerPort: 80
+      name: web
+    startupProbe:
+      httpGet:
+        path: /
+        port: web
+    readinessProbe:
+      httpGet:
+        path: /
+        port: web
+      initialDelaySeconds: 5
+    livenessProbe:
+      httpGet:
+        path: /
+        port: web
+      periodSeconds: 30
+      initialDelaySeconds: 10
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
 ```

@@ -41,6 +41,8 @@ Logs by container inside a pod
 kubectl logs $POD_NAME -c $CONTAINER_NAME
 ```
 
+The flag `-f` (`--follow`) 	Specify if the logs should be streamed.
+
 ##  Manage context
 
 List existing context
