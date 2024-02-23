@@ -10,3 +10,7 @@
 ## To review
 - [ ] Probes
 - [ ] Pod command/arg syntax
+- [ ] Deployments and autoscaling
+- [ ] Rollout command
+- [ ] Jobs
+- [ ] Port mapping

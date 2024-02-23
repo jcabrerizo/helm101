@@ -39,6 +39,27 @@ Use `-o yaml` and `--dry-run=client`
 kubectl run $NAME --image=$IMAGE -o yaml --dry-run=client > $FILENAME.yaml
 ```
 
+# Annotations
+
+## Annotate existing resource
+```script
+kubectl annotate [--overwrite] (-f $FILENAME | $TYPE $NAME) KEY_1=VAL_1 ... KEY_N=VAL_N [--resource-version=$VERSION]
+```
+
+# Labels
+
+```script
+kubectl label pod $POD_NAME $LABEL_KEY=u$LABEL_VALUE
+```
+
+# Resource selection
+
+Use the flag `-l` / `--selector`
+
+```script
+kubectl get $RESOURCE_TYPE -l $LABEL_NAME_1=$LABEL_VALUE -l '$LABEL_NAME_2 in ($VALUE_1, $OR_VALUE_2)' --show-labels
+```
+
 # Executing commands in Containers
 
 ## Temporal pods for running a command

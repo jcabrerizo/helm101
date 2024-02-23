@@ -68,3 +68,40 @@ spec:
   restartPolicy: Always
 status: {}
 ```
+
+## Deployments
+
+Create deployment and set replica number
+```script
+kubectl create deployment $DEPLOYMENT_NAME --image=$IMAGE
+kubectl scale deployment $DEPLOYMENT_NAME --replicas=2
+```
+
+Update image
+```shell
+kubectl set image deployment $DEPLOYMENT_NAME $CONTAINER_NAME=$IMAGE
+```
+
+```shell
+kubectl rollout history deployments $DEPLOYMENT_NAME
+```
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: $DEPLOYMENT_NAME
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      $LABEL: $LABEL_VAL
+  template:
+    metadata:
+      labels:
+        app: $LABEL_VAL
+    spec:
+      containers:
+      - name: server
+        image: $IMAGE
+```
