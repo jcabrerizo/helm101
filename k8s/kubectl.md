@@ -70,3 +70,18 @@ List resources within a helm release:
 ```shell
 kubectl api-resources --verbs=list -o name | xargs -n 1 kubectl get --show-kind -l app.kubernetes.io/instance=${$RELEASE_NAME} --ignore-not-found -o name
 ```
+
+## Verbosity
+
+Kubectl verbosity is controlled with the `-v` or `--v` flags followed by an integer representing the log level
+
+* `--v=0`: Generally useful for this to always be visible to a cluster operator.
+* `--v=1`: A reasonable default log level if you don't want verbosity.
+* `--v=2`: Useful steady state information about the service and important log messages that may correlate to significant changes in the system. **Default**
+* `--v=3`: Extended information about changes.
+* `--v=4`: **Debug** level verbosity.
+* `--v=5`: **Trace** level verbosity.
+* `--v=6`: Display **requested resources**.
+* `--v=7`: Display HTTP request headers.
+* `--v=8`: Display HTTP request contents.
+* `--v=9`: Display HTTP request contents without truncation of contents.
