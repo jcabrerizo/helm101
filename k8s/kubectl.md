@@ -59,6 +59,14 @@ Set context namespace
 ```shell
 kubectl config set-context $CONTEXT_NAME --namespace=$NAMESPACE
 ```
+
+It shows the current one and the default namespace for each one
+```
+CURRENT   NAME              CLUSTER            AUTHINFO         NAMESPACE
+*         docker-desktop    docker-desktop     docker-desktop   $CONTEXT_NAME
+          microk8s          microk8s-cluster   admin
+```
+
 for unset use `--namespace=''`
 
 List supported API resources and abbreviations on the server
