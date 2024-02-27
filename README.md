@@ -14,3 +14,6 @@
 - [ ] Rollout command
 - [ ] Jobs
 - [ ] Port mapping
+- [ ] Update strategies
+- [ ] Docker commands
+- [ ] Services exposure: clusterIp, nodePort and loadBalancer 
