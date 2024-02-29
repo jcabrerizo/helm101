@@ -6,8 +6,6 @@
 * Memory: Exceeding can't be done, but requesting more force the pod to be evicted from the node
 * Ephemeral storage: the scheduler selects a node with enough space for all the containers of a pod. The pod can be evicted if limit is reached
 
-
-
 ## Multi-container pods
 
 ### Ambassador
@@ -100,39 +98,23 @@ spec:
 status: {}
 ```
 
-## Deployments
+## Security context
 
-Create deployment and set replica number
-```script
-kubectl create deployment $DEPLOYMENT_NAME --image=$IMAGE
-kubectl scale deployment $DEPLOYMENT_NAME --replicas=2
-```
+https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
 
-Update image
-```shell
-kubectl set image deployment $DEPLOYMENT_NAME $CONTAINER_NAME=$IMAGE
-```
-
-```shell
-kubectl rollout history deployments $DEPLOYMENT_NAME
-```
+Prevent `root` execution
 
 ```yaml
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Pod
 metadata:
-  name: $DEPLOYMENT_NAME
+  name: nginx
 spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      $LABEL: $LABEL_VAL
-  template:
-    metadata:
-      labels:
-        app: $LABEL_VAL
-    spec:
-      containers:
-      - name: server
-        image: $IMAGE
+  securityContext:
+    runAsNonRoot: true
+  containers:
+  - image: nginx
+    name: nginx
 ```
+
+It could fail if the image tries to run as `root`

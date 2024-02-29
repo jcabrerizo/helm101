@@ -97,7 +97,7 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
   name: $SC_NAME
-provisioner: kubernetes.io/gce-pd
+provisioner: kubernetes.io/gce-pd # for Google Compute Engine
 parameters:
   type: pd-ssd
 ```
