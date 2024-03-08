@@ -37,15 +37,15 @@ spec:
           accessKeyIDSecretRef:
             name: awssm-secret
             key: access-key
-            namespace: $NAMESPACE
+#            namespace: $NAMESPACE # not needed as it must be in the same namespace as the `SecretStore`
           secretAccessKeySecretRef:
             name: awssm-secret
             key: secret-access-key
-            namespace: $NAMESPACE
+#            namespace: $NAMESPACE # not needed as it must be in the same namespace as the `SecretStore`
 ```
 
 [External secret](https://external-secrets.io/latest/api/externalsecret/)
-The `ExternalSecret` describes what data should be fetched, how the data should be transformed and saved as a Kind=Secret
+The `ExternalSecret` describes what data should be fetched, how the data should be transformed and saved as a `kind: Secret`
 
 ```yaml
 apiVersion: external-secrets.io/v1beta1
@@ -117,4 +117,13 @@ spec:
         key: $REMOTE_SECRET_KEY
         property: $REMOTE_SECRET_PROPERTY
 #        decodingStrategy: Base64 # optional
+```
+
+## Tricks:
+
+### Trigger an update
+From the FAQ
+
+```shell
+kubectl annotate externalsecret $EXTERNAL_SECRET_NAME force-sync=$(date +%s) --overwrite -n $NAMESPACE
 ```
