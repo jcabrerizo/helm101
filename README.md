@@ -17,3 +17,8 @@
 - [ ] Update strategies
 - [ ] Docker commands
 - [ ] Services exposure: clusterIp, nodePort and loadBalancer 
+
+## TODO
+- [ ] `yq` notes
+- [ ] `docker login` command
+- [ ] add in `helm repo login` commands examples of the repo url, as it's important 

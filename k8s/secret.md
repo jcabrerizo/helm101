@@ -3,10 +3,33 @@
 By default, secret are `base64` encoded, but real encryption can be configured.
 
 ```shell
-SECRET_VALUE=$(echo $VALUE|base64)
 kubectl create secret generic $SECRET_NAME --from-literal=$SECRET_KEY=$SECRET_VALUE
-
 kubectl get secrets
+```
+
+> [!NOTE]\
+> **Example** notice the secret value is passed _plain_, but stored as `base64`
+
+```shell
+kubectl create secret generic test --from-literal=secretName=secretValue
+# kubectl get secret test -o=yaml 
+# apiVersion: v1
+# data:
+#   secretName: c2VjcmV0VmFsdWU=
+# kind: Secret
+# metadata:
+#   creationTimestamp: "2024-03-09T11:35:02Z"
+#   name: test
+#   namespace: default
+#   resourceVersion: "122029"
+#   uid: c40ae44d-fc1f-4668-a451-f51628f1a187
+# type: Opaque
+
+secret=$(kubectl get secret test -o=jsonpath='{.data.secretName}')  
+# $secret=c2VjcmV0VmFsdWU= 
+
+base64 -d <<< $secret
+# secretValue%
 ```
 
 ```yaml

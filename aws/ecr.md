@@ -18,3 +18,14 @@ aws ecr get-login-password \
   --password-stdin \
   ${ECR_HELM_REPOSITORY%%/*}
 ```
+
+## Push image to ECR
+```shell
+docker tag $DOCKER_IMAGE_ID ${ECR_REPO}/${IMAGE_NAME}:${IMAGE_NAME}
+docker push $ECR_REPO/$IMAGE_NAME:${IMAGE_NAME}
+```
+
+## Push helm charts
+```shell
+helm push ${CHAR_NAME}-${CHAR_VERSION}.tgz oci://${ECR_REPO}
+```

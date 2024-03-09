@@ -81,20 +81,3 @@ Configure kubectl
 ```shell
 aws eks update-kubeconfig --region $AWS_REGION --name $EKS_CLUSTER_NAME
 ```
-
----
-
-# ECR
-
-Push image to ECR
-```shell
-aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $ECR_REPO
-docker tag $DOCKER_IMAGE_ID ${ECR_REPO}/${IMAGE_NAME}:${IMAGE_NAME}
-docker push $ECR_REPO/$IMAGE_NAME:${IMAGE_NAME}
-```
-
-For helm charts
-```shell
-aws ecr get-login-password --region $AWS_REGION | helm registry login --username AWS --password-stdin $ECR_REPO
-helm push ${CHAR_NAME}-${CHAR_VERSION}.tgz oci://${ECR_REPO}
-```

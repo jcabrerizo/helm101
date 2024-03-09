@@ -1,5 +1,12 @@
 # Storage
 
+## List storage resources
+```shell
+kubectl get pv, pvc, sc
+```
+
+---
+
 Three modes:
 * RWO: Read write once
 * ROX read only many
@@ -101,8 +108,3 @@ provisioner: kubernetes.io/gce-pd # for Google Compute Engine
 parameters:
   type: pd-ssd
 ```
-
-```shell
-kubectl get pv, pvc, sc
-```
-

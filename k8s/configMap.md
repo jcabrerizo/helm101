@@ -1,6 +1,6 @@
 # ConfigMap
 
-They must exist before the pods unless are optionsl
+They must exist before the pods unless are optional
 
 Can be injected as environment var or volume
 

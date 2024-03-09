@@ -38,7 +38,7 @@ spec:
 
 ## Scaling deployments
 
-Scale also allows users to specify one or more preconditions for the scale action. If `–current-replicas` or `–resource-version` is specified, it is validated before the scale is attempted
+Scale also allows users to specify one or more preconditions for the scale action. If `–-current-replicas` or `–-resource-version` is specified, it is validated before the scale is attempted
 
 ```shell
 kubectl scale $DEPLOYMENT_NAME --replicas=4
@@ -56,7 +56,7 @@ A deployment change is stored and it can be rolled back
 
 ```shell
 kubectl rollout status $DEPLOYMENT_NAME
-kubectl rollout restart deployment/abc
+kubectl rollout restart $DEPLOYMENT_NAME
 kubectl rollout restart deployment --selector=$SELECTOR_KEY=$SELECTOR_VALUE
 kubectl rollout history $DEPLOYMENT_NAME
 kubectl rollout undo $DEPLOYMENT_NAME

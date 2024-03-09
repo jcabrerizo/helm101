@@ -1,24 +1,5 @@
 # Imperative commands
 
-## Namespaces
-
-### Create name space
-```shell
-kubectl create namespace $NAMESPACE
-```
-
-### Delete name space
-It deletes the objects on the namespace too
-```shell
-kubectl delete namespace $NAMESPACE
-```
-
-## Secrets
-
-```shell
-kubectl create secret generic $SECRET_NAME --from-literal=${SECRET_KEY}=${SECRET_VALUE} -n $NAMESPACE
-```
-
 ## Pods
 
 ### Create pod
@@ -37,27 +18,6 @@ Notice the use of `create` instead of `run` and the absence of pod name as it's 
 Use `-o yaml` and `--dry-run=client` 
 ```shell
 kubectl run $NAME --image=$IMAGE -o yaml --dry-run=client > $FILENAME.yaml
-```
-
-# Annotations
-
-## Annotate existing resource
-```script
-kubectl annotate [--overwrite] (-f $FILENAME | $TYPE $NAME) KEY_1=VAL_1 ... KEY_N=VAL_N [--resource-version=$VERSION]
-```
-
-# Labels
-
-```script
-kubectl label pod $POD_NAME $LABEL_KEY=u$LABEL_VALUE
-```
-
-# Resource selection
-
-Use the flag `-l` / `--selector`
-
-```script
-kubectl get $RESOURCE_TYPE -l $LABEL_NAME_1=$LABEL_VALUE -l '$LABEL_NAME_2 in ($VALUE_1, $OR_VALUE_2)' --show-labels
 ```
 
 # Executing commands in Containers
@@ -92,3 +52,43 @@ kubectl exec --stdin --tty $POD_NAME -- $COMMAND
 ```
 
 For multi-container pods, the flag `-c $CONTAINER_NAME` can be used for target an specific container within the pod
+
+## Namespaces
+
+### Create name space
+```shell
+kubectl create namespace $NAMESPACE
+```
+
+### Delete name space
+It deletes the objects on the namespace too
+```shell
+kubectl delete namespace $NAMESPACE
+```
+
+## Secrets
+
+```shell
+kubectl create secret generic $SECRET_NAME --from-literal=${SECRET_KEY}=${SECRET_VALUE} -n $NAMESPACE
+```
+
+# Annotations
+
+## Annotate existing resource
+```script
+kubectl annotate [--overwrite] (-f $FILENAME | $TYPE $NAME) KEY_1=VAL_1 ... KEY_N=VAL_N [--resource-version=$VERSION]
+```
+
+# Labels
+
+```script
+kubectl label pod $POD_NAME $LABEL_KEY=u$LABEL_VALUE
+```
+
+# Resource selection
+
+Use the flag `-l` / `--selector`
+
+```script
+kubectl get $RESOURCE_TYPE -l $LABEL_NAME_1=$LABEL_VALUE -l '$LABEL_NAME_2 in ($VALUE_1, $OR_VALUE_2)' --show-labels
+```

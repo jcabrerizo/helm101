@@ -12,12 +12,12 @@
 
 ## Visual mode
 * `ctrl` + `v`  - Starts block selection
-* `I`       - Insert in all selected lines. esc for finishing
-* `esc`     - end visual mode and apply
+* `I`           - Insert in all selected lines. esc for finishing
+* `esc`         - end visual mode and apply
 
 ## View
-* `ctrl` + `w` + <arrow>                      - Move the focus between views. `j`, `k`, `l` or `i` can be used instead of arrows
-* `vim -o $FILE_ONE $FILE_TWO $FILE_N`  - Open multiple files in split mode
+* `ctrl` + `w` + <arrow>                    - Move the focus between views. `j`, `k`, `l` or `i` can be used instead of arrows
+* `vim -o $FILE_ONE $FILE_TWO $FILE_N`      - Open multiple files in split mode
 
 ## Open terminal
 * `:term`           - Split the view and opens the terminal. Other `vim` instance can be open in that new term
@@ -26,7 +26,7 @@
 
 ### Show cursor markers
 
-* :set cursorcolumn         - Renders a vertical line over the cursor position. Alias `:set cuc`
-* :set cursorline           - Renders a horizontal line over the cursor position. Alias `:set cul`
-* :set nocursorcolumn       - Removes vertical indicator. Alias `:set nocuc`
-* :set nocursorline         - Removes horizontal indicator. Alias `:set nocul`
+* `:set cursorcolumn`         - Renders a vertical line over the cursor position. Alias `:set cuc`
+* `:set cursorline`           - Renders a horizontal line over the cursor position. Alias `:set cul`
+* `:set nocursorcolumn`       - Removes vertical indicator. Alias `:set nocuc`
+* `:set nocursorline`         - Removes horizontal indicator. Alias `:set nocul`

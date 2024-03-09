@@ -120,7 +120,7 @@ helm history $RELEASE_NAME
 ### Validating helm chart
 Interaction with the actual k8s cluster
 ```shell
-helm install releaseName –debug –dry-run $HELM_DIR
+helm install releaseName –-debug -–dry-run $HELM_DIR
 ```
 
 Validating only the YAMLs

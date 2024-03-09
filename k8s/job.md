@@ -2,7 +2,7 @@
 
 https://kubernetes.io/docs/concepts/workloads/controllers/job/
 
-The use of Jobs and CronJobs can further assist with implementing decoupled and transient microservices.
+The use of `Jobs` and `CronJobs` can further assist with implementing decoupled and transient microservices.
 
 There are three parameters we can use to affect how the job runs:
 * backoffLimit
@@ -36,7 +36,7 @@ spec:
 If `activeDeadlineSeconds` is reached, details of the job shows it
 
 ```yaml
-..
+...
 status:
   conditions:
   - lastProbeTime: "2024-03-07T07:28:35Z"

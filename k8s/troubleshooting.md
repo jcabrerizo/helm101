@@ -1,12 +1,16 @@
 # Troubleshooting
 
-```shell
-kubectl create deployment troubleshoot --image=nginx
-kubectl exec -ti troubleshoot- -- /bin/sh
-```
+> [!NOTE]\
+> Create a pod and ssh in to have access to clusterIP deployments 
+> 
+> ```shell
+> kubectl create deployment troubleshoot --image=busybox
+> kubectl exec -ti troubleshoot- -- /bin/sh
+> ```
 
-is the pod running?
+## Is the pod running?
 
 ```shell
-kubectl logs pod-name 
+kubectl describe pods $POD_NAME
+kubectl logs $POD_NAME 
 ```
