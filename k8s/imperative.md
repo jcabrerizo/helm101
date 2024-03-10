@@ -33,7 +33,8 @@ kubectl run busybox --image=busybox --restart=Never --rm -it -n $NAMESPACE \
 
 If no command is provided, it opens an interactive shell.
 
-A common scenario is to make `wget` request:
+A common scenario is to make `wget` request; `--restart=Never` can't be omitted:
+
 ```shell
 kubectl run $NODE_NAME --image=busybox -it --rm --restart=Never -- wget -O- $TARGET_ENDPOINT
 ```

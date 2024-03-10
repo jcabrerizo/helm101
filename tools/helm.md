@@ -110,6 +110,7 @@ helm get notes $RELEASE_NAME
 Upgrade release, after modifying the chart code
 ```shell
 helm upgrade example $HELM_DIR
+helm upgrade myrelease repo/foo --set=image.tag=1.2.2
 ```
 
 List release story

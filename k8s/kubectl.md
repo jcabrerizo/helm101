@@ -1,5 +1,7 @@
 # `kubectl` command
 
+**Docs**: https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands
+
 Get all pods
 ```shell
 kubectl get pods -A
@@ -56,6 +58,12 @@ kubectl config use-context $CONTEXT_NAME
 ```
 
 Set context namespace
+
+```shell
+kubectl config set-context -current --namespace=$NAMESPACE
+```
+
+or for other context: 
 ```shell
 kubectl config set-context $CONTEXT_NAME --namespace=$NAMESPACE
 ```

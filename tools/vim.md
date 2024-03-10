@@ -24,6 +24,20 @@
 
 ## yaml tricks
 
+### yaml setup
+The default configuration can be saved the `~/.vimrc`.
+
+These are useful for yaml:
+* `tabstop`     tab press spacing size
+* `expandtab`   make sure to use spaces for tabs. 
+* `shiftwidth`  new line extra space when new nested block is detected
+
+```shell
+set tabstop=2
+set expandtab
+set shiftwidth=2
+```
+
 ### Show cursor markers
 
 * `:set cursorcolumn`         - Renders a vertical line over the cursor position. Alias `:set cuc`
