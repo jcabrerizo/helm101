@@ -10,10 +10,11 @@
 * New interface https://itnext.io/cks-cka-ckad-changed-terminal-to-remote-desktop-157a26c1d5e
 * Use Application->Accessories->Mousepad to write down notes for yourself during the exam. 
 * Add namespaces to stored scripts or commands
-* Scripts cab be executed as parameter of `sh`: `sh /path/script.sh`
+* Scripts can be executed as parameter of `sh`: `sh /path/script.sh`
 * `-h` is faster to type than `--help` 🤫
 * If no *name* is required in the command, probably it has a `--name` flag
 * `curl` supports a flag to set the max time in seconds `-m 5`
+
 ## Questions doubts
 
 Captured during the exam
@@ -35,7 +36,6 @@ Captured during the exam
 * **pq1**: study container spec, who owns what, probes, sa
 
 ## Main failures
-
 From the detailed score
 
 * **q10**: wrong service name
@@ -66,7 +66,7 @@ From the detailed score
 * `nodePort` needs to be added when changing from ClusterIP to NodePort type, unless same port is desired 
 
 ### Jobs
-Key words:
+Keywords:
 * completions (plural)
 * parallelism
 
