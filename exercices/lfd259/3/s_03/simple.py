@@ -1,24 +1,23 @@
 #!/usr/bin/python3
 ## Import the necessary modules
-import time
 import socket
+import time
 
 ## Use an ongoing while loop to generate output
-while True :
+while True:
+    ## Set the hostname and the current date
+    host = socket.gethostname()
+    date = time.strftime("%Y-%m-%d %H:%M:%S")
 
-## Set the hostname and the current date
-  host = socket.gethostname()
-  date = time.strftime("%Y-%m-%d %H:%M:%S")
+    ## Convert the date output to a string
+    now = str(date)
 
-## Convert the date output to a string
-  now = str(date)
+    ## Open the file named date in append mode
+    ## Append the output of hostname and time
+    f = open("date.out", "a")
+    f.write(now + "\n")
+    f.write(host + "\n")
+    f.close()
 
-## Open the file named date in append mode
-## Append the output of hostname and time
-  f = open("date.out", "a" )
-  f.write(now + "\n")
-  f.write(host + "\n")
-  f.close()
-
-## Sleep for five seconds then continue the loop
-  time.sleep(5)
+    ## Sleep for five seconds then continue the loop
+    time.sleep(5)

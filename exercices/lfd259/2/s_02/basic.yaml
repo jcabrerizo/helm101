@@ -4,5 +4,5 @@ metadata:
   name: basicpod
 spec:
   containers:
-  - name: webcont
-    image: nginx
+    - name: webcont
+      image: nginx

@@ -11,6 +11,7 @@ kubectl rollout undo $NAME
 ```  
 
 ## Show history
+
 ```shell
 kubectl rollout history deployment $NAME --revision=$REVISION
 ```

@@ -9,9 +9,9 @@ metadata:
   name: pod-1
 spec:
   containers:
-  - image: nginx
-    name: pod-1
-    resources: {}
+    - image: nginx
+      name: pod-1
+      resources: { }
   dnsPolicy: ClusterFirst
   restartPolicy: Always
-status: {}
+status: { }

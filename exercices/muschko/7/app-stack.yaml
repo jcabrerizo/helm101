@@ -13,8 +13,8 @@ metadata:
     tier: frontend
 spec:
   containers:
-  - name: frontend
-    image: nginx
+    - name: frontend
+      image: nginx
 ---
 kind: Pod
 apiVersion: v1
@@ -26,8 +26,8 @@ metadata:
     tier: backend
 spec:
   containers:
-  - name: backend
-    image: nginx
+    - name: backend
+      image: nginx
 ---
 kind: Pod
 apiVersion: v1
@@ -39,8 +39,8 @@ metadata:
     tier: database
 spec:
   containers:
-  - name: database
-    image: mysql
-    env:
-    - name: MYSQL_ROOT_PASSWORD
-      value: example
+    - name: database
+      image: mysql
+      env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: example

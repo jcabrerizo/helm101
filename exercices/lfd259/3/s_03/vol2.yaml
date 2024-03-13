@@ -6,7 +6,7 @@ metadata:
   name: registryvm
 spec:
   accessModes:
-  - ReadWriteOnce
+    - ReadWriteOnce
   capacity:
     storage: 200Mi
   hostPath:

@@ -6,11 +6,11 @@ spec:
   securityContext:
     runAsUser: 1000
   containers:
-  - name: busy 
-    image: busybox
-    command:
-      - sleep
-      - "3600"
-    securityContext:
-      runAsUser: 2000
-      allowPrivilegeEscalation: false
+    - name: busy
+      image: busybox
+      command:
+        - sleep
+        - "3600"
+      securityContext:
+        runAsUser: 2000
+        allowPrivilegeEscalation: false

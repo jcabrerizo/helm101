@@ -4,6 +4,6 @@ metadata:
   name: break1
 spec:
   containers:
-  - name: mountain-region
-    image: nginx:1.11-apline
+    - name: mountain-region
+      image: nginx:1.11-apline
 

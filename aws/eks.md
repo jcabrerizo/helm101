@@ -1,6 +1,7 @@
 # EKS
 
 # `eksclt`
+
 https://eksctl.io/
 
 https://eksctl.io/getting-started/
@@ -8,10 +9,11 @@ https://eksctl.io/getting-started/
 ## Commands
 
 > **WARNING**
-> 
+>
 > The `eksctl create cluster` execution will overwrite the `~/.kube/config` file to configure access
 
 Create default cluster with:
+
 - exciting auto-generated name
 - two m5.large worker nodes
 - use the official AWS EKS AMI
@@ -23,16 +25,19 @@ eksctl create cluster
 ```
 
 For forcing a specific version on k8s:
+
 ```shell
 eksctl create cluster --version=1.24
 ```
 
 Listing existing clusters
+
 ```shell
 aws eks list-clusters
 ```
 
 Describe cluster shows endpoint and VPC and internet access exposure
+
 ```shell
 aws eks describe-cluster --name $CLUSTER_NAME
 ```
@@ -40,6 +45,7 @@ aws eks describe-cluster --name $CLUSTER_NAME
 Or for changing default behaviour a yaml config file can be used:
 
 [medium2nodesCluster.yaml](./2_large_node_cluster.yaml):
+
 ```yaml
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
@@ -73,11 +79,13 @@ eksctl create cluster -f medium2nodesCluster.yaml
 > ```
 
 Testing a config file using [`--dry-run`](https://eksctl.io/usage/dry-run/):
+
 ```shell
 eksctl create cluster -f 2_large_node_cluster.yaml --dry-run 
 ```
 
 Configure kubectl
+
 ```shell
 aws eks update-kubeconfig --region $AWS_REGION --name $EKS_CLUSTER_NAME
 ```

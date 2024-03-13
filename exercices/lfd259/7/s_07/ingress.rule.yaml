@@ -7,11 +7,11 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: www.example.com
-    http:
-      paths:
-      - backend:
-          serviceName: secondapp
-          servicePort: 80
-        path: /
+    - host: www.example.com
+      http:
+        paths:
+          - backend:
+              serviceName: secondapp
+              servicePort: 80
+            path: /
 

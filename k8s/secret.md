@@ -19,11 +19,9 @@ kubectl get secret $SECRET_NAME
 #   $SECRET_KEY: $SECRET_VALUE
 ```
 
-
-
 > [!NOTE]\
 > **Example** notice the secret value is passed _plain_, but stored as `base64`
-> 
+>
 > ```shell
 > kubectl create secret generic test --from-literal=secretName=secretValue
 > # kubectl get secret test -o=yaml 

@@ -6,8 +6,8 @@ spec:
   securityContext:
     runAsUser: 2100
   containers:
-  - name:  webguy
-    image: nginx
-    securityContext:
-      runAsUser: 3000
-      allowPrivilegeEscalation: false
+    - name: webguy
+      image: nginx
+      securityContext:
+        runAsUser: 3000
+        allowPrivilegeEscalation: false

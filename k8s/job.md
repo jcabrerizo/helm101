@@ -5,6 +5,7 @@ https://kubernetes.io/docs/concepts/workloads/controllers/job/
 The use of `Jobs` and `CronJobs` can further assist with implementing decoupled and transient microservices.
 
 There are three parameters we can use to affect how the job runs:
+
 * backoffLimit
 * completions
 * parallelism

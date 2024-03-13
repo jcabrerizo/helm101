@@ -9,11 +9,11 @@ spec:
       persistentVolumeClaim:
         claimName: logs-pvc
   containers:
-  - image: nginx
-    name: pvc-consumer
-    volumeMounts:
-      - mountPath: /var/log/nginx
-        name: nginx-logs
+    - image: nginx
+      name: pvc-consumer
+      volumeMounts:
+        - mountPath: /var/log/nginx
+          name: nginx-logs
   dnsPolicy: ClusterFirst
   restartPolicy: Always
-status: {}
+status: { }

@@ -6,8 +6,8 @@ metadata:
     run: my-nginx
 spec:
   ports:
-  - port: 80
-  type: NodePort 
+    - port: 80
+  type: NodePort
   selector:
     example: second
 

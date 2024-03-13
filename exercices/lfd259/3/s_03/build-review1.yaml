@@ -26,28 +26,28 @@ spec:
         app: break2
     spec:
       containers:
-      - image: nginx
-        imagePullPolicy: Always
-        name: brokenapp
-        resources: {}
-        terminationMessagePath: /dev/termination-log
-        terminationMessagePolicy: File
-      - name: goproxy
-        image: registry.k8s.io/goproxy:0.1
-        readinessProbe:
-          tcpSocket:
-            port: 808
-          initialDelaySeconds: 5
-          periodSeconds: 10
-        livenessProbe:
-          tcpSocket:
-            port: 808
-          initialDelaySeconds: 15
-          periodSeconds: 20
+        - image: nginx
+          imagePullPolicy: Always
+          name: brokenapp
+          resources: { }
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        - name: goproxy
+          image: registry.k8s.io/goproxy:0.1
+          readinessProbe:
+            tcpSocket:
+              port: 808
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            tcpSocket:
+              port: 808
+            initialDelaySeconds: 15
+            periodSeconds: 20
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
-      securityContext: {}
+      securityContext: { }
       terminationGracePeriodSeconds: 30
 status:
 

@@ -17,9 +17,9 @@ metadata:
 spec:
   serviceAccountName: monitoring
   containers:
-  - image: nginx
-    name: nginx
-    resources: {}
+    - image: nginx
+      name: nginx
+      resources: { }
   dnsPolicy: ClusterFirst
   restartPolicy: Always
-status: {}
+status: { }

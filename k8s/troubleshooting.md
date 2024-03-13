@@ -1,8 +1,8 @@
 # Troubleshooting
 
 > [!NOTE]\
-> Create a pod and ssh in to have access to clusterIP deployments 
-> 
+> Create a pod and ssh in to have access to clusterIP deployments
+>
 > ```shell
 > kubectl create deployment troubleshoot --image=busybox
 > kubectl exec -ti troubleshoot- -- /bin/sh

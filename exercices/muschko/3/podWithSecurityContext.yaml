@@ -4,9 +4,9 @@ metadata:
   name: security-context-demo
 spec:
   containers:
-  - image: alpine
-    name: alpine
-    securityContext:
-      capabilities:
-        add: ["SYS_TIME"]
+    - image: alpine
+      name: alpine
+      securityContext:
+        capabilities:
+          add: [ "SYS_TIME" ]
   restartPolicy: Never

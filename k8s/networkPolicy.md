@@ -24,9 +24,11 @@ spec:
             ...
 ```
 
-The empty braces will match all Pods not selected by other NetworkPolicy and will not allow ingress traffic. Egress traffic would be unaffected by this policy.
+The empty braces will match all Pods not selected by other NetworkPolicy and will not allow ingress traffic. Egress
+traffic would be unaffected by this policy.
 
 [Default deny all ingress traffic](https://kubernetes.io/docs/concepts/services-networking/network-policies/#default-deny-all-ingress-traffic)
+
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy

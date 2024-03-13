@@ -4,14 +4,14 @@ metadata:
   creationTimestamp: null
   labels:
     run: pod-2
-    tier: backend 
+    tier: backend
     team: artemidis
   name: pod-2
 spec:
   containers:
-  - image: nginx
-    name: pod-2
-    resources: {}
+    - image: nginx
+      name: pod-2
+      resources: { }
   dnsPolicy: ClusterFirst
   restartPolicy: Always
-status: {}
+status: { }

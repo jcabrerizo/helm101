@@ -23,6 +23,7 @@ curl -fsSL -o $OUTPUT_FILE_NAME $URL
 ```
 
 ### Find hooks
+
 ```shell
 grep -Ril 'helm.sh/hook' | while read -r line ; do
     echo "Hook found in $line"

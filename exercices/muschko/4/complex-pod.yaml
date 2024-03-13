@@ -7,15 +7,15 @@ metadata:
   name: complex-pod
 spec:
   containers:
-  - image: nginx
-    name: complex-pod
-    ports:
-    - containerPort: 80
-    resources: {}
+    - image: nginx
+      name: complex-pod
+      ports:
+        - containerPort: 80
+      resources: { }
   dnsPolicy: ClusterFirst
   restartPolicy: Always
   initContainers:
-    - name: initializer 
+    - name: initializer
       image: busybox
-      command: ['/bin/sh', '-c', 'wget -O- google.com']
-status: {}
+      command: [ '/bin/sh', '-c', 'wget -O- google.com' ]
+status: { }

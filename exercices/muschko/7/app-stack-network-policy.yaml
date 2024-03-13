@@ -7,13 +7,13 @@ spec:
     matchLabels:
       tier: database
   policyTypes:
-  - Ingress
+    - Ingress
   ingress:
-  - from:
-    - podSelector:
-        matchLabels:
-          tier: backend
-            #    ports:
-            #      - protocol: TCP
-            #        port: 3306
-            
+    - from:
+        - podSelector:
+            matchLabels:
+              tier: backend
+                #    ports:
+                #      - protocol: TCP
+                #        port: 3306
+

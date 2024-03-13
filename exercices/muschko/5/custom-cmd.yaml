@@ -7,11 +7,11 @@ metadata:
   name: custom-cmd
 spec:
   containers:
-  - image: busybox
-    name: custom-cmd
-    resources: {}
-    command: ['/bin/sh']
-    args: ['-c', 'top-analyzer', '--all']
+    - image: busybox
+      name: custom-cmd
+      resources: { }
+      command: [ '/bin/sh' ]
+      args: [ '-c', 'top-analyzer', '--all' ]
   dnsPolicy: ClusterFirst
   restartPolicy: Always
-status: {}
+status: { }

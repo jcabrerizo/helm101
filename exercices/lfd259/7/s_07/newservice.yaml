@@ -4,10 +4,10 @@ metadata:
   name: secondapp
 spec:
   ports:
-  - port: 80
-    protocol: TCP
+    - port: 80
+      protocol: TCP
   selector:
     example: second
   sessionAffinity: None
 status:
-  loadBalancer: {}
+  loadBalancer: { }

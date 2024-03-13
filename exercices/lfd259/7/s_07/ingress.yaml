@@ -3,18 +3,18 @@ kind: Ingress
 metadata:
   name: ingress-test
   annotations:
-    nginx.ingress.kubernetes.io/service-upstream: "true" 
+    nginx.ingress.kubernetes.io/service-upstream: "true"
   namespace: default
 spec:
   ingressClassName: nginx
   rules:
-  - host: www.example.com
-    http:
-      paths:
-      - backend:
-          service:
-            name: secondapp
-            port:
-              number: 80
-        path: /
-        pathType: ImplementationSpecific
+    - host: www.example.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: secondapp
+                port:
+                  number: 80
+            path: /
+            pathType: ImplementationSpecific

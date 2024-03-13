@@ -7,12 +7,12 @@ metadata:
   name: security-context-demo-book
 spec:
   containers:
-  - image: alpine
-    name: security-context-demo
-    resources: {}
-    securityContext:
-      capabilities:
-        add: ["SYS_TIME"]
+    - image: alpine
+      name: security-context-demo
+      resources: { }
+      securityContext:
+        capabilities:
+          add: [ "SYS_TIME" ]
   dnsPolicy: ClusterFirst
-    #  restartPolicy: Never
-status: {}
+  #  restartPolicy: Never
+status: { }

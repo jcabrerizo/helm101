@@ -2,10 +2,12 @@
 
 Some helm features are not supported within EKS
 all helm commands here are currently ran with helm version 3.8.1
+
 * All Capabilities objects are supported, with an exception for .APIVersions
-* * i) .APIVersions is not supported for non-built in custom k8 APIs
+*
+    * i) .APIVersions is not supported for non-built in custom k8 APIs
 * All Release objects (except .Name and .Namespace) are not supported
-*  Helm hooks and the Lookup function are not supported
+* Helm hooks and the Lookup function are not supported
 * All dependent charts must be located within the main helm chart (specified with repository path file://...)
 * Helm chart must successfully pass Helm Lint and Helm Template with no errors
 
@@ -31,6 +33,7 @@ helm template ${CHART_NAME}-${CHART_VERSION}.tgz \
 ```
 
 Create manifest interacting with the cluster
+
 ```shell
 export CHART_RELEASE_NAME=test-release
 helm install \

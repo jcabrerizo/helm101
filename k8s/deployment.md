@@ -8,6 +8,7 @@ kubectl scale deployment $DEPLOYMENT_NAME --replicas=2
 ```
 
 Update image
+
 ```shell
 kubectl set image deployment $DEPLOYMENT_NAME $CONTAINER_NAME=$IMAGE
 ```
@@ -38,7 +39,8 @@ spec:
 
 ## Scaling deployments
 
-Scale also allows users to specify one or more preconditions for the scale action. If `–-current-replicas` or `–-resource-version` is specified, it is validated before the scale is attempted
+Scale also allows users to specify one or more preconditions for the scale action. If `–-current-replicas`
+or `–-resource-version` is specified, it is validated before the scale is attempted
 
 ```shell
 kubectl scale $DEPLOYMENT_NAME --replicas=4

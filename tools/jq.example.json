@@ -45,7 +45,6 @@
     "locked": false,
     "assignee": null,
     "assignees": [
-
     ],
     "milestone": null,
     "comments": 3,
@@ -56,13 +55,60 @@
     "active_lock_reason": null,
     "body": "https://github.com/jqlang/jq/blob/913b26469f47351a9f75a1bc4145f45421115e37/ChangeLog#L826-L829
 
-Hi,
-when you add multiple files you can do either  `jq -s '.[0] + .[1] + .[2]' file0.json file1.json file2.json`  or `jq -s 'add' *.json`
+    Hi,
+    when
+    you
+    add
+    multiple
+    files
+    you
+    can
+    do
+    either
+    `
+    jq
+    -s
+    '.[0] + .[1] + .[2]'
+    file0.json
+    file1.json
+    file2.json
+    `
+    or
+    `
+    jq
+    -s
+    'add'
+    *.json
+    `
 
-can we have a similar syntax for `jq -s '.[0] * .[1] * .[2]' file0.json file1.json file2.json` ?
-Could maybe be: `jq -s 'multiply' *.json`
+    can
+    we
+    have
+    a
+    similar
+    syntax
+    for
+    `
+    jq
+    -s
+    '.[0] * .[1] * .[2]'
+    file0.json
+    file1.json
+    file2.json
+    `
+    ?
+    Could
+    maybe
+    be:
+    `
+    jq
+    -s
+    'multiply'
+    *.json
+    `
 
-Thanks",
+    Thanks
+    ",
     "reactions": {
       "url": "https://api.github.com/repos/jqlang/jq/issues/3048/reactions",
       "total_count": 0,
@@ -111,13 +157,11 @@ Thanks",
       "site_admin": false
     },
     "labels": [
-
     ],
     "state": "open",
     "locked": false,
     "assignee": null,
     "assignees": [
-
     ],
     "milestone": null,
     "comments": 4,
@@ -128,47 +172,129 @@ Thanks",
     "active_lock_reason": null,
     "body": "### Version
 
-`jq-1.7.1`
+    `
+    jq-1.7.1
+    `
 
-### Problem
+    #
+    #
+    #
+    Problem
 
-I am working with an [API](https://docs.syncthing.net/rest/stats-device-get.html) that outputs dates in this format:
+    I
+    am
+    working
+    with
+    an
+  [
+    API
+  ]
+  (https
+  :
+  //docs.syncthing.net/rest/stats-device-get.html) that outputs dates in this format:
 
-```json
-{
-  \"lastSeen\": \"2024-02-19T17:37:01-05:00\",
-  \"lastConnectionDurationS\": 190.612964
-}
-```
-I'm trying to parse that `lastSeen` string into epoch time, something like
+  `
+  `
+  `
+  json
+  {
+    \
+  "lastSeen\": \"2024-02-19T17:37:01-05:00\",
+  \
+  "lastConnectionDurationS\": 190.612964
+  }
+  `
+  `
+  `
+  I
+  'm trying to parse that `lastSeen` string into epoch time, something like
 
-```shelll
-$ jq '.lastSeen | strptime(\"%Y-%m-%dT%H:%M:%S-05:00\") | mktime'
-1708364221
-```
+  `
+  `
+  `
+  shelll
+  $
+  jq
+  '.lastSeen | strptime(\"%Y-%m-%dT%H:%M:%S-05:00\") | mktime'
+  1708364221
+  `
+  `
+  `
 
-I am looking for a more generalized function that can accept a date formatted in this way and turn it into the correct epoch time integer. My jq-fu isn't up to the challenge. Was wondering if anyone had ideas. I've read the related links below.
+  I
+  am
+  looking
+  for
+  a
+  more
+  generalized
+  function
+  that
+  can
+  accept
+  a
+  date
+  formatted
+  in
+  this
+  way
+  and
+  turn
+  it
+  into
+  the
+  correct
+  epoch
+  time
+  integer.
+  My
+  jq-fu
+  isn
+  't up to the challenge. Was wondering if anyone had ideas. I'
+  ve
+  read
+  the
+  related
+  links
+  below.
 
-### Related
+  #
+  #
+  #
+  Related
 
-- https://jqlang.github.io/jq/manual/#dates
-- https://github.com/jqlang/jq/issues/1053
-",
-    "reactions": {
-      "url": "https://api.github.com/repos/jqlang/jq/issues/3047/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/jqlang/jq/issues/3047/timeline",
-    "performed_via_github_app": null,
-    "state_reason": null
+  -
+  https
+  :
+  //jqlang.github.io/jq/manual/#dates
+  -
+  https
+  :
+  //github.com/jqlang/jq/issues/1053
+  ",
+  "reactions"
+  :
+  {
+    "url": "https://api.github.com/repos/jqlang/jq/issues/3047/reactions",
+    "total_count": 0,
+    "+1": 0,
+    "-1": 0,
+    "laugh": 0,
+    "hooray": 0,
+    "confused": 0,
+    "heart": 0,
+    "rocket": 0,
+    "eyes": 0
+  },
+  "timeline_url"
+  :
+  "https://api.github.com/repos/jqlang/jq/issues/3047/timeline",
+  "performed_via_github_app"
+  :
+  null,
+  "state_reason"
+  :
+  null
   },
   {
     "url": "https://api.github.com/repos/jqlang/jq/issues/3044",
@@ -234,7 +360,6 @@ I am looking for a more generalized function that can accept a date formatted in
     "locked": false,
     "assignee": null,
     "assignees": [
-
     ],
     "milestone": null,
     "comments": 14,
@@ -253,15 +378,54 @@ I am looking for a more generalized function that can accept a date formatted in
     },
     "body": "This commit adds borrowing to the jv c-api
 
-As discussed this adds a borrowed flag in the jv struct.
+    As
+    discussed
+    this
+    adds
+    a
+    borrowed
+    flag
+    in
+    the
+    jv
+    struct.
 
-Adds the following functions
-`jv jv_borrow(jv)`
-`jv jv_is_borrowed(jv)`
+    Adds
+    the
+    following
+    functions
+    `
+    jv
+    jv_borrow(jv)
+    `
+    `
+    jv
+    jv_is_borrowed(jv)
+    `
 
-Changes jv_copy() and jv_free() to return early if the jv is borrowed
+    Changes
+    jv_copy()
+    and
+    jv_free()
+    to
+    return
+    early
+    if
+    the
+    jv
+    is
+    borrowed
 
-still need to add documentation for the two functions",
+    still
+    need
+    to
+    add
+    documentation
+    for
+    the
+    two
+    functions
+    ",
     "reactions": {
       "url": "https://api.github.com/repos/jqlang/jq/issues/3044/reactions",
       "total_count": 0,
@@ -310,13 +474,11 @@ still need to add documentation for the two functions",
       "site_admin": false
     },
     "labels": [
-
     ],
     "state": "open",
     "locked": false,
     "assignee": null,
     "assignees": [
-
     ],
     "milestone": null,
     "comments": 3,
@@ -333,8 +495,20 @@ still need to add documentation for the two functions",
       "patch_url": "https://github.com/jqlang/jq/pull/3040.patch",
       "merged_at": null
     },
-    "body": "Pull Request for #2868 
-- Added `jv_array_slice` function to support slicing of the array",
+    "body": "Pull Request for #2868
+    -
+    Added
+    `
+    jv_array_slice
+    `
+    function
+    to
+    support
+    slicing
+    of
+    the
+    array
+    ",
     "reactions": {
       "url": "https://api.github.com/repos/jqlang/jq/issues/3040/reactions",
       "total_count": 0,
@@ -383,13 +557,11 @@ still need to add documentation for the two functions",
       "site_admin": false
     },
     "labels": [
-
     ],
     "state": "open",
     "locked": false,
     "assignee": null,
     "assignees": [
-
     ],
     "milestone": null,
     "comments": 0,
@@ -400,96 +572,511 @@ still need to add documentation for the two functions",
     "active_lock_reason": null,
     "body": "When using `--stream` or `tostream`, I was surprised to find some elements in the stream that have only a path but no value. After some experimentation, I found that these are emitted whenever an object or array ends, with the path being the same as the path of the previous leaf.
 
-```bash
-$ echo '{\"a\":13, \"b\":[{\"x\":true}, {}, 42]}' | jq --stream -c '.'
-[[\"a\"],13]
-[[\"b\",0,\"x\"],true]
-[[\"b\",0,\"x\"]]
-[[\"b\",1],{}]
-[[\"b\",2],42]
-[[\"b\",2]]
-[[\"b\"]]
-```
+    `
+    `
+    `
+    bash
+    $
+    echo
+    '{\"a\":13, \"b\":[{\"x\":true}, {}, 42]}'
+    |
+    jq
+    --stream
+    -c
+    '.'
+  [
+    [
+      \
+    "a\"],13]
+    [
+      [
+        \
+      "b\",0,\"x\"],true]
+      [
+        [
+          \
+        "b\",0,\"x\"]]
+        [
+          [
+            \
+          "b\",1],{}]
+          [
+            [
+              \
+            "b\",2],42]
+            [
+              [
+                \
+              "b\",2]]
+              [
+                [
+                  \
+                "b\"]]
+                `
+                `
+                `
 
-Same with `jq -nc 'inputs | tostream'`.
+                Same
+                with
+                `
+                jq
+                -nc
+                'inputs | tostream'
+                `
+                .
 
-### Issue 1
+                #
+                #
+                #
+                Issue
+                1
 
-First, I would like to report a *documentation request*. I found this behaviour [is documented](https://jqlang.github.io/jq/manual/#streaming)
+                First,
+                I
+                would
+                like
+                to
+                report
+                a
+                *documentation
+                request*.
+                I
+                found
+                this
+                behaviour
+                [
+                  is
+                  documented
+                ]
+                (https
+                :
+                //jqlang.github.io/jq/manual/#streaming)
 
-> Streaming forms include […] `[<path>]` (to indicate the end of an array or object)
+                >
+                Streaming
+                forms
+                include
+                [
+                  …
+                ]
+                `
+                [
+                  <path>
+                ]
+                `
+                (to
+                indicate
+                the
+                end
+                of
+                an
+                array
+                or
+                object)
 
-but there is no explanation **why these are necessary, how they should be treated, or what the significance of the `path` is** in these \"object/array terminators\". Why not use/allow any other value?
+                but
+                there
+                is
+                no
+                explanation
+                **why
+                these
+                are
+                necessary,
+                how
+                they
+                should
+                be
+                treated,
+                or
+                what
+                the
+                significance
+                of
+                the
+                `
+                path
+                `
+                is**
+                in
+                these
+                \
+                "object/array terminators\". Why not use/allow any other value?
 
-(I can guess that `fromstream` needs them to be able to generate multiple results, but this is not obvious - and doesn't explain why this particular format is needed)
+                (I
+                can
+                guess
+                that
+                `
+                fromstream
+                `
+                needs
+                them
+                to
+                be
+                able
+                to
+                generate
+                multiple
+                results,
+                but
+                this
+                is
+                not
+                obvious
+                -
+                and
+                doesn
+                't explain why this particular format is needed)
 
-### Issue 2
+                #
+                #
+                #
+                Issue
+                2
 
-Second, I would like to report a *bug / feature request*: **`fromstream` fails silently when these terminator values are missing or invalid**.
-I found by experimentation that a valid terminator is any array that has a non-empty array as its single element. It doesn't matter what the values inside the inner array are, it just mustn't be empty. `[]` and `[[]]` are ignored.
+                Second,
+                I
+                would
+                like
+                to
+                report
+                a
+                *bug
+                /
+                feature
+                request*
+                :
+                **
+                `
+                fromstream
+                `
+                fails
+                silently
+                when
+                these
+                terminator
+                values
+                are
+                missing
+                or
+                invalid**.
+                I
+                found
+                by
+                experimentation
+                that
+                a
+                valid
+                terminator
+                is
+                any
+                array
+                that
+                has
+                a
+                non-empty
+                array
+                as
+                its
+                single
+                element.
+                It
+                doesn
+                't matter what the values inside the inner array are, it just mustn'
+                t
+                be
+                empty.
+                `
+                []
+                `
+                and
+                `
+                [
+                  []
+                ]
+                `
+                are
+                ignored.
 
-#### Reproduction
-```bash
-$ jq -nc 'fromstream([[\"a\"],13], [[\"b\",0,\"x\"], true], [[\"b\",0,\"x\"]], [[\"b\",0]], [[\"b\"]])'
-{\"a\":13,\"b\":[{\"x\":true}]} # as expected
+                #
+                #
+                #
+                #
+                Reproduction
+                `
+                `
+                `
+                bash
+                $
+                jq
+                -nc
+                'fromstream([[\"a\"],13], [[\"b\",0,\"x\"], true], [[\"b\",0,\"x\"]], [[\"b\",0]], [[\"b\"]])'
+                {
+                  \
+                "a\":13,\"b\":[{\"x\":true}]} # as expected
 
-$ jq -nc 'fromstream([[\"a\"],13], [[\"b\",0,\"x\"], true], [[\"b\"]])'
-{\"a\":13,\"b\":[{\"x\":true}]} # works even without terminators for the inner object and array
+                $
+                jq
+                -nc
+                'fromstream([[\"a\"],13], [[\"b\",0,\"x\"], true], [[\"b\"]])'
+                {
+                  \
+                "a\":13,\"b\":[{\"x\":true}]} # works even without terminators for the inner object and array
 
-$ jq -nc 'fromstream([[\"a\"],13], [[\"b\",0,\"x\"], true], [[ {}, null, false ]])'
-{\"a\":13,\"b\":[{\"x\":true}]} # really works with arbitrary values in the path
+                $
+                jq
+                -nc
+                'fromstream([[\"a\"],13], [[\"b\",0,\"x\"], true], [[ {}, null, false ]])'
+                {
+                  \
+                "a\":13,\"b\":[{\"x\":true}]} # really works with arbitrary values in the path
 
-$ jq -nc 'fromstream([[\"a\"],13], [[\"b\",0,\"x\"], true])'
-$ jq -nc 'fromstream([[\"a\"],13], [[\"b\",0,\"x\"], true], [])'
-$ jq -nc 'fromstream([[\"a\"],13], [[\"b\",0,\"x\"], true], [[]])'
-# no output at all!
-```
+                $
+                jq
+                -nc
+                'fromstream([[\"a\"],13], [[\"b\",0,\"x\"], true])'
+                $
+                jq
+                -nc
+                'fromstream([[\"a\"],13], [[\"b\",0,\"x\"], true], [])'
+                $
+                jq
+                -nc
+                'fromstream([[\"a\"],13], [[\"b\",0,\"x\"], true], [[]])'
+                #
+                no
+                output
+                at
+                all!
+                `
+                `
+                `
 
-#### Expected behaviour
-I would expect this to either just generate the output once the input generator ends, or to throw an error about the missing terminator.
+                #
+                #
+                #
+                #
+                Expected
+                behaviour
+                I
+                would
+                expect
+                this
+                to
+                either
+                just
+                generate
+                the
+                output
+                once
+                the
+                input
+                generator
+                ends,
+                or
+                to
+                throw
+                an
+                error
+                about
+                the
+                missing
+                terminator.
 
-### Background
+                #
+                #
+                #
+                Background
 
-I was trying to merge multiple objects that are provided separately. I later found out this can be achieved easier with
-```bash
-$ echo '{\"a\":13} {\"b\":42}' | jq -c --slurp 'reduce .[] as $obj ({}; . * $obj)'
-{\"a\":13,\"b\":42}
-# or
-$ echo '{\"a\":13} {\"b\":42}' | jq -cn 'reduce inputs as $obj ({}; . * $obj)'
-{\"a\":13,\"b\":42}
-```
-but my first attempt was to use streams
-```bash
-$ echo '{\"a\":13} {\"b\":42}' | jq -c --stream 'fromstream(.)'
-# no output at all?! bug?
-$ echo '{\"a\":13} {\"b\":42}' | jq -c --stream --slurp 'fromstream(.[])'
-{\"a\":13}
-{\"b\":42}
-# not what I wanted, but ok
-$ echo '{\"a\":13} {\"b\":42}' | jq -cn --stream 'fromstream(inputs)'
-{\"a\":13}
-{\"b\":42}
-# same thing
-```
-before I realised that I had to remove (filter out) the terminators between the objects and then append my own in the end:
-```bash
-$ echo '{\"a\":13} {\"b\":42}' | jq -n --stream 'fromstream((inputs | select(has(1))), [[0]])' -c
-{\"a\":13,\"b\":42}
-```",
-    "reactions": {
-      "url": "https://api.github.com/repos/jqlang/jq/issues/3037/reactions",
-      "total_count": 0,
-      "+1": 0,
-      "-1": 0,
-      "laugh": 0,
-      "hooray": 0,
-      "confused": 0,
-      "heart": 0,
-      "rocket": 0,
-      "eyes": 0
-    },
-    "timeline_url": "https://api.github.com/repos/jqlang/jq/issues/3037/timeline",
-    "performed_via_github_app": null,
-    "state_reason": null
-  }
-]
+                I
+                was
+                trying
+                to
+                merge
+                multiple
+                objects
+                that
+                are
+                provided
+                separately.
+                I
+                later
+                found
+                out
+                this
+                can
+                be
+                achieved
+                easier
+                with
+                `
+                `
+                `
+                bash
+                $
+                echo
+                '{\"a\":13} {\"b\":42}'
+                |
+                jq
+                -c
+                --slurp
+                'reduce .[] as $obj ({}; . * $obj)'
+                {
+                  \
+                "a\":13,\"b\":42}
+                #
+                or
+                $
+                echo
+                '{\"a\":13} {\"b\":42}'
+                |
+                jq
+                -cn
+                'reduce inputs as $obj ({}; . * $obj)'
+                {
+                  \
+                "a\":13,\"b\":42}
+                `
+                `
+                `
+                but
+                my
+                first
+                attempt
+                was
+                to
+                use
+                streams
+                `
+                `
+                `
+                bash
+                $
+                echo
+                '{\"a\":13} {\"b\":42}'
+                |
+                jq
+                -c
+                --stream
+                'fromstream(.)'
+                #
+                no
+                output
+                at
+                all
+                ?
+                !
+                bug
+                ?
+                $
+                echo
+                '{\"a\":13} {\"b\":42}'
+                |
+                jq
+                -c
+                --stream
+                --slurp
+                'fromstream(.[])'
+                {
+                  \
+                "a\":13}
+                {
+                  \
+                "b\":42}
+                #
+                not
+                what
+                I
+                wanted,
+                but
+                ok
+                $
+                echo
+                '{\"a\":13} {\"b\":42}'
+                |
+                jq
+                -cn
+                --stream
+                'fromstream(inputs)'
+                {
+                  \
+                "a\":13}
+                {
+                  \
+                "b\":42}
+                #
+                same
+                thing
+                `
+                `
+                `
+                before
+                I
+                realised
+                that
+                I
+                had
+                to
+                remove
+                (filter
+                out)
+                the
+                terminators
+                between
+                the
+                objects
+                and
+                then
+                append
+                my
+                own
+                in
+                the
+                end
+                :
+                `
+                `
+                `
+                bash
+                $
+                echo
+                '{\"a\":13} {\"b\":42}'
+                |
+                jq
+                -n
+                --stream
+                'fromstream((inputs | select(has(1))), [[0]])'
+                -c
+                {
+                  \
+                "a\":13,\"b\":42}
+                `
+                `
+                `
+                ",
+                "reactions"
+                :
+                {
+                  "url": "https://api.github.com/repos/jqlang/jq/issues/3037/reactions",
+                  "total_count": 0,
+                  "+1": 0,
+                  "-1": 0,
+                  "laugh": 0,
+                  "hooray": 0,
+                  "confused": 0,
+                  "heart": 0,
+                  "rocket": 0,
+                  "eyes": 0
+                },
+                "timeline_url"
+                :
+                "https://api.github.com/repos/jqlang/jq/issues/3037/timeline",
+                "performed_via_github_app"
+                :
+                null,
+                "state_reason"
+                :
+                null
+                }
+              ]

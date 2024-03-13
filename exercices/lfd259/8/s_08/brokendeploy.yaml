@@ -24,15 +24,15 @@ spec:
         app: thirdpage
     spec:
       containers:
-      - image: nginx
-        imagePullPolicy: Always
-        name: nginx
-        resources: {}
-        terminationMessagePath: /dev/termination-log
-        terminationMessagePolicy: File
+        - image: nginx
+          imagePullPolicy: Always
+          name: nginx
+          resources: { }
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
-      securityContext: {}
+      securityContext: { }
       terminationGracePeriodSeconds: 30
 status:

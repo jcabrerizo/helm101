@@ -7,13 +7,13 @@ metadata:
   name: loop
 spec:
   containers:
-  - args:
-    - /bin/sh
-    - -c
-    - while true; do date ;done
-    image: busybox
-    name: loop
-    resources: {}
+    - args:
+        - /bin/sh
+        - -c
+        - while true; do date ;done
+      image: busybox
+      name: loop
+      resources: { }
   dnsPolicy: ClusterFirst
   restartPolicy: Never
-status: {}
+status: { }

@@ -93,8 +93,8 @@ expose:
       # The service port Notary listens on. Only needed when notary.enabled
       # is set to true
       notaryPort: 4443
-    annotations: {}
-    sourceRanges: []
+    annotations: { }
+    sourceRanges: [ ]
 
 # The external URL for Harbor core service. It is used to
 # 1) populate the docker/helm commands showed on portal
@@ -378,11 +378,11 @@ nginx:
   #  requests:
   #    memory: 256Mi
   #    cpu: 100m
-  nodeSelector: {}
-  tolerations: []
-  affinity: {}
+  nodeSelector: { }
+  tolerations: [ ]
+  affinity: { }
   ## Additional deployment annotations
-  podAnnotations: {}
+  podAnnotations: { }
 
 portal:
   image:
@@ -395,11 +395,11 @@ portal:
   #  requests:
   #    memory: 256Mi
   #    cpu: 100m
-  nodeSelector: {}
-  tolerations: []
-  affinity: {}
+  nodeSelector: { }
+  tolerations: [ ]
+  affinity: { }
   ## Additional deployment annotations
-  podAnnotations: {}
+  podAnnotations: { }
 
 core:
   image:
@@ -416,11 +416,11 @@ core:
   #  requests:
   #    memory: 256Mi
   #    cpu: 100m
-  nodeSelector: {}
-  tolerations: []
-  affinity: {}
+  nodeSelector: { }
+  tolerations: [ ]
+  affinity: { }
   ## Additional deployment annotations
-  podAnnotations: {}
+  podAnnotations: { }
   # Secret is used when core server communicates with other components.
   # If a secret key is not specified, Helm will generate one.
   # Must be a string of 16 chars.
@@ -453,11 +453,11 @@ jobservice:
   #   requests:
   #     memory: 256Mi
   #     cpu: 100m
-  nodeSelector: {}
-  tolerations: []
-  affinity: {}
+  nodeSelector: { }
+  tolerations: [ ]
+  affinity: { }
   ## Additional deployment annotations
-  podAnnotations: {}
+  podAnnotations: { }
   # Secret is used when job service communicates with other components.
   # If a secret key is not specified, Helm will generate one.
   # Must be a string of 16 chars.
@@ -484,11 +484,11 @@ registry:
     #    memory: 256Mi
     #    cpu: 100m
   replicas: 1
-  nodeSelector: {}
-  tolerations: []
-  affinity: {}
+  nodeSelector: { }
+  tolerations: [ ]
+  affinity: { }
   ## Additional deployment annotations
-  podAnnotations: {}
+  podAnnotations: { }
   # Secret is used to secure the upload state from client
   # and registry storage backend.
   # See: https://github.com/docker/distribution/blob/master/docs/configuration.md#http
@@ -530,11 +530,11 @@ chartmuseum:
   #  requests:
   #    memory: 256Mi
   #    cpu: 100m
-  nodeSelector: {}
-  tolerations: []
-  affinity: {}
+  nodeSelector: { }
+  tolerations: [ ]
+  affinity: { }
   ## Additional deployment annotations
-  podAnnotations: {}
+  podAnnotations: { }
 
 trivy:
   # enabled the flag to enable Trivy scanner
@@ -587,11 +587,11 @@ trivy:
     limits:
       cpu: 1
       memory: 1Gi
-  nodeSelector: {}
-  tolerations: []
-  affinity: {}
+  nodeSelector: { }
+  tolerations: [ ]
+  affinity: { }
   ## Additional deployment annotations
-  podAnnotations: {}
+  podAnnotations: { }
 
 notary:
   enabled: false
@@ -606,11 +606,11 @@ notary:
     #  requests:
     #    memory: 256Mi
     #    cpu: 100m
-    nodeSelector: {}
-    tolerations: []
-    affinity: {}
+    nodeSelector: { }
+    tolerations: [ ]
+    affinity: { }
     ## Additional deployment annotations
-    podAnnotations: {}
+    podAnnotations: { }
   signer:
     # set the service account to be used, default if left empty
     serviceAccountName: ""
@@ -622,11 +622,11 @@ notary:
     #  requests:
     #    memory: 256Mi
     #    cpu: 100m
-    nodeSelector: {}
-    tolerations: []
-    affinity: {}
+    nodeSelector: { }
+    tolerations: [ ]
+    affinity: { }
     ## Additional deployment annotations
-    podAnnotations: {}
+    podAnnotations: { }
   # Fill the name of a kubernetes secret if you want to use your own
   # TLS certificate authority, certificate and private key for notary
   # communications.
@@ -651,9 +651,9 @@ database:
     #  requests:
     #    memory: 256Mi
     #    cpu: 100m
-    nodeSelector: {}
-    tolerations: []
-    affinity: {}
+    nodeSelector: { }
+    tolerations: [ ]
+    affinity: { }
   external:
     host: "192.168.0.1"
     port: "5432"
@@ -678,7 +678,7 @@ database:
   # Note: the default number of connections is 1024 for postgre of harbor.
   maxOpenConns: 1000
   ## Additional deployment annotations
-  podAnnotations: {}
+  podAnnotations: { }
 
 redis:
   # if external Redis is used, set "type" to "external"
@@ -694,9 +694,9 @@ redis:
     #  requests:
     #    memory: 256Mi
     #    cpu: 100m
-    nodeSelector: {}
-    tolerations: []
-    affinity: {}
+    nodeSelector: { }
+    tolerations: [ ]
+    affinity: { }
   external:
     # support redis, redis+sentinel
     # addr for redis: <host_redis>:<port_redis>
@@ -713,24 +713,24 @@ redis:
     trivyAdapterIndex: "5"
     password: ""
   ## Additional deployment annotations
-  podAnnotations: {}
+  podAnnotations: { }
 
 exporter:
-    replicas: 1
+  replicas: 1
   # resources:
   #  requests:
   #    memory: 256Mi
   #    cpu: 100m
-    podAnnotations: {}
-    serviceAccountName: ""
-    image:
-      repository: goharbor/harbor-exporter
-      tag: v2.2.1
-    nodeSelector: {}
-    tolerations: []
-    affinity: {}
-    cacheDuration: 30
-    cacheCleanInterval: 14400
+  podAnnotations: { }
+  serviceAccountName: ""
+  image:
+    repository: goharbor/harbor-exporter
+    tag: v2.2.1
+  nodeSelector: { }
+  tolerations: [ ]
+  affinity: { }
+  cacheDuration: 30
+  cacheCleanInterval: 14400
 
 metrics:
   enabled: false

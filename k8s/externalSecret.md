@@ -1,7 +1,9 @@
 # External Secrets
+
 https://external-secrets.io/
 
 Set AWS access creds:
+
 ```shell
 kubectl create secret generic awssm-secret --from-file=./access-key --from-file=./secret-access-key -n $NAMESPACE
 ```
@@ -19,7 +21,8 @@ TARGET_K8S_SECRET_NAME=<replace>
 ```
 
 [Secret store example](https://external-secrets.io/latest/api/secretstore/)
-The SecretStore is **namespaced** and specifies how to access the external API. The SecretStore maps to exactly one instance of an external API.
+The SecretStore is **namespaced** and specifies how to access the external API. The SecretStore maps to exactly one
+instance of an external API.
 
 ```yaml
 apiVersion: external-secrets.io/v1beta1
@@ -45,7 +48,8 @@ spec:
 ```
 
 [External secret](https://external-secrets.io/latest/api/externalsecret/)
-The `ExternalSecret` describes what data should be fetched, how the data should be transformed and saved as a `kind: Secret`
+The `ExternalSecret` describes what data should be fetched, how the data should be transformed and saved as
+a `kind: Secret`
 
 ```yaml
 apiVersion: external-secrets.io/v1beta1
@@ -70,7 +74,8 @@ spec:
 ```
 
 [Cluster secret store](https://external-secrets.io/latest/api/clustersecretstore/)
-The `ClusterSecretStore` is a cluster scoped SecretStore that can be referenced by all `ExternalSecrets` from all namespaces. Use it to offer a central gateway to your secret backend.
+The `ClusterSecretStore` is a cluster scoped SecretStore that can be referenced by all `ExternalSecrets` from all
+namespaces. Use it to offer a central gateway to your secret backend.
 
 ```yaml
 apiVersion: external-secrets.io/v1beta1
@@ -122,6 +127,7 @@ spec:
 ## Tricks:
 
 ### Trigger an update
+
 From the FAQ
 
 ```shell
