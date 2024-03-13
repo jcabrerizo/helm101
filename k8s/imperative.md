@@ -41,7 +41,6 @@ kubectl run $NODE_NAME --image=busybox -it --rm --restart=Never -- wget -O- $TAR
 
 
 ## Run command in a existing pod 
-
 Open a interactive shell
 ```shell
 kubectl exec -it $POD_NAME -- /bin/sh
@@ -68,28 +67,39 @@ kubectl delete namespace $NAMESPACE
 ```
 
 ## Secrets
-
 ```shell
 kubectl create secret generic $SECRET_NAME --from-literal=${SECRET_KEY}=${SECRET_VALUE} -n $NAMESPACE
 ```
 
-# Annotations
-
-## Annotate existing resource
+## Annotations
+Annotate existing resource
 ```script
 kubectl annotate [--overwrite] (-f $FILENAME | $TYPE $NAME) KEY_1=VAL_1 ... KEY_N=VAL_N [--resource-version=$VERSION]
 ```
 
-# Labels
+## Labels
 
+Add label
 ```script
 kubectl label pod $POD_NAME $LABEL_KEY=u$LABEL_VALUE
 ```
 
-# Resource selection
+Remove label; notice final `-`
+```script
+kubectl label pod $POD_NAME $LABEL_KEY-
+```
 
+## Resource selection
 Use the flag `-l` / `--selector`
 
 ```script
 kubectl get $RESOURCE_TYPE -l $LABEL_NAME_1=$LABEL_VALUE -l '$LABEL_NAME_2 in ($VALUE_1, $OR_VALUE_2)' --show-labels
 ```
+
+## Verbosity
+`-v=$LEVEL` controls the output level.
+* `1`   default
+* `4`   debug
+* `5`   trace
+* `6`   http request url
+* `8`   shows http request body

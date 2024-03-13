@@ -1,6 +1,22 @@
 # `kubectl` command
 
-**Docs**: https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands
+## Docs: 
+
+* https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands
+* https://kubernetes.io/docs/reference/kubectl/quick-reference/
+
+## Help
+
+This command describes the fields associated with each supported API resource
+
+```shell
+kubectl explain $RESOURCE_NAME
+```
+
+Adding the ``--recursive` flag shows the a yaml example with all its fields
+
+
+## Pod
 
 Get all pods
 ```shell

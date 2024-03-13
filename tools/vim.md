@@ -1,5 +1,9 @@
 # Vim
 
+## Navigate
+* `shift` +  `o`    - Go to the end of the file
+* `:1`              - Go to the beginning of the file (line 1)
+
 ## Delete
 * `cc`  - Delete current line and switch to insert mode
 * `dd`  - Full line
@@ -7,6 +11,7 @@
 * `C`   - Delete to the end of te line and switch to insert mode
 
 ## Lines
+* `:X`          - Go to line X
 * `:set number` - Show number lines
 * `:m+X`        - Moves line X lines above or down depending on -X of +X
 
