@@ -7,21 +7,26 @@
 ## Training
 
 1. [Muschko CKAD book](exercices/muschko)
+2. [Official Linux Foundation training LFD 259](https://training.linuxfoundation.org/training/kubernetes-for-developers/)
+3. [dgkanatsios/CKAD-exercises repo](https://github.com/dgkanatsios/CKAD-exercises/tree/main) ⭐️⭐️⭐️⭐️⭐️
 
 ## To review
 
-- [ ] Probes
-- [ ] Pod command/arg syntax
-- [ ] Deployments and autoscaling
-- [ ] Rollout command
-- [ ] Jobs
-- [ ] Port mapping
+- [x] Probes
+- [x] Pod command/arg syntax
+- [x] Deployments and autoscaling
+- [x] Rollout command
+- [x] Jobs
+- [x] Port mapping
 - [ ] Update strategies
-- [ ] Docker commands
-- [ ] Services exposure: clusterIp, nodePort and loadBalancer
+- [x] Docker commands
+- [x] Services exposure: clusterIp, nodePort and loadBalancer
 
 ## TODO
 
 - [ ] `yq` notes
-- [ ] `docker login` command
-- [ ] add in `helm repo login` commands examples of the repo url, as it's important 
+- [ ] `jsonpath` notes
+- [ ] `docker` abd `podman` commands
+- [ ] Add in `helm repo login` commands examples of the repo url, as it's important
+- [ ] Generate better `README.md` files for the root of each dir.
+- [ ] Automate ^

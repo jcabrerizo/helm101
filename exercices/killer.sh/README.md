@@ -53,7 +53,7 @@ From the detailed score
 * `readinessProbe` belong to the container
 * `resources` belong to the container
 * `securityContext` belong to the container
-* `volumeMounts` belong to the container BUT `volumes` and `persistentVolumeClaim` to the **`.specs`**
+* `volumeMounts` belong to the container BUT `volumes` and `persistentVolumeClaim` to the pod **`.spec`**
 
 ### Deployments
 
@@ -80,7 +80,7 @@ Keywords:
 
 * `kubectl describe secret $SECRET` returns the unencoded secret value for some types, as `service-account-token`.
 * Check injected secrets in pod:
-    * `kubectl exec $POD_NAME -- find /$PATH`
+  * `kubectl exec $POD_NAME -- find $PATH`
     * `kubectl exec $POD_NAME -- env | grep $ENVVAR_NAME`
 
 ### Rollout

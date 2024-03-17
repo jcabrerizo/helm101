@@ -37,3 +37,9 @@ done
 for name in $(kubectl get pods --selector=app=appName --output name); \
     do kubectl exec $name -- touch /tmp/healthy; done
 ```
+
+### Copy files to/from the pod
+
+```shell
+kubectl cp $POD_NAME:$REMOTE_PATH $LOCAL_PATH
+```
