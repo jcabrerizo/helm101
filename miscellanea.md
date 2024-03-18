@@ -1,4 +1,4 @@
-# Miscelanea
+# Miscellanea
 
 ## Util commands & scripts
 

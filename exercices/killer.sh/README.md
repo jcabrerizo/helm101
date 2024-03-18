@@ -8,7 +8,7 @@
     * https://kubernetes.io/blog
     * https://helm.sh/docs
 * New interface https://itnext.io/cks-cka-ckad-changed-terminal-to-remote-desktop-157a26c1d5e
-* Use Application->Accessories->Mousepad to write down notes for yourself during the exam.
+* Use Application --> Accessories --> Mousepad to write down notes for yourself during the exam.
 * Add namespaces to stored scripts or commands
 * Scripts can be executed as parameter of `sh`: `sh /path/script.sh`
 * `-h` is faster to type than `--help` 🤫

@@ -84,7 +84,7 @@ kubectl config use-context $CONTEXT_NAME
 Set context namespace
 
 ```shell
-kubectl config set-context -current --namespace=$NAMESPACE
+kubectl config set-context --current --namespace=$NAMESPACE
 ```
 
 or for other context:

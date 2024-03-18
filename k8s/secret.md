@@ -53,7 +53,7 @@ spec:
     - image: busybox
       name: busybox
       env:
-      - name: $SECRET_NAME # Env var nae
+      - name: $SECRET_NAME # Env var name
         valueFrom:
           secretKeyRef:
             name: $SECRET_NAME
