@@ -3,7 +3,7 @@
 ```shell
 alias k='kubectl'
 alias kkill='kubectl delete --grace-period=0 --force'
-alias ksetc='kubectl config --set-context --current --namespace '
+alias ksetc='kubectl config set-context --current --namespace '
 ```
 
 ## Partial commands:
