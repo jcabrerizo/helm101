@@ -65,6 +65,32 @@ nodeGroups:
 eksctl create cluster -f medium2nodesCluster.yaml
 ````
 
+or use manage node groups instead:
+
+```yaml
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: manual-created-1-29-ng
+  region: ap-northeast-2
+  version: '1.29'
+
+managedNodeGroups:
+  - name: ng-1-workers-amd
+    labels: { role: workers }
+    instanceType: m5.large
+    desiredCapacity: 0
+    volumeSize: 80
+    privateNetworking: true
+  - name: ng-2-workers-arm
+    labels: { role: workers }
+    instanceType: m7g.large
+    desiredCapacity: 0
+    volumeSize: 100
+    privateNetworking: true
+```
+
 > **~~TODO~~**: getting an error using this file, I think related with permissions:
 >
 > **REASON**: m5.medium doesn't exist. The error describing the AZs is not related.
