@@ -128,7 +128,7 @@ spec:
 
 ### Trigger an update
 
-From the FAQ
+From the [FAQ](https://external-secrets.io/latest/introduction/faq/)
 
 ```shell
 kubectl annotate externalsecret $EXTERNAL_SECRET_NAME force-sync=$(date +%s) --overwrite -n $NAMESPACE
