@@ -1,37 +1,35 @@
-# Kubernetes and helm notes
+# k8s 101
 
-* [AWS: ECR & EKS + `eksctl`](aws/)
-* [Helm](./helm.md)
-* [Kubernetes & kubectl](./k8s/)
+> [!NOTE]
+> For reading the notes go to the [docs](./docs) dir or to the built site (TODO)
 
-## Training
+Docs managed with [Material for Mkdocs](https://squidfunk.github.io/mkdocs-material/)
 
-1. [Muschko CKAD book](exercices/muschko)
-2. [Official Linux Foundation training LFD 259](https://training.linuxfoundation.org/training/kubernetes-for-developers/)
-3. [dgkanatsios/CKAD-exercises repo](https://github.com/dgkanatsios/CKAD-exercises/tree/main) ⭐️⭐️⭐️⭐️⭐️
+* getting starter: https://squidfunk.github.io/mkdocs-material/getting-started/
 
-## To review
+## Run docs site locally
 
-- [x] Probes
-- [x] Pod command/arg syntax
-- [x] Deployments and autoscaling
-- [x] Rollout command
-- [x] Jobs
-- [x] Port mapping
-- [ ] Update strategies
-- [x] Docker commands
-- [x] Services exposure: clusterIp, nodePort and loadBalancer
+```shell
+mkdocs serve
+```
+
+## Set up
+
+```shell
+# create environment
+python3.12 -m venv venv
+# install mkdocs-material
+python3.12 -m pip install mkdocs-material
+```
+
+[![Built with Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white)](https://squidfunk.github.io/mkdocs-material/)
 
 ## TODO
 
-- [ ] `yq` notes
-- [ ] `jsonpath` notes
-- [ ] `docker` and `podman` commands
-- [ ] `Dockefile` examples:
-  ```dockerfile
-  FROM docker.io/httpd:2.4
-  RUN echo "Hello, World!" > /usr/local/apache2/htdocs/index.html
-  ```
-- [ ] Add in `helm repo login` commands examples of the repo url, as it's important
-- [ ] Generate better `README.md` files for the root of each dir.
-- [ ] Automate ^
+* [ ] add `index` pages per each dir to improve experience while navigating on the repo instead of on the site. Those
+  index should not interfere with the mkdoc table of content
+* [ ] move code snipped in md files to independent files
+* [ ] order content menu
+* [ ] publish site
+* [ ] action to publish the site
+* [ ] git hook for format the md files
