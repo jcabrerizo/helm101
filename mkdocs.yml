@@ -1,13 +1,25 @@
 site_name: k8s 101
 docs_dir: docs
 site_dir: ./site
+repo_url: https://github.com/jcabrerizo/k8s101
+edit_uri: edit/main/docs/
 
 plugins:
   - search
+#nav:
+#  - 'BD, ML, DS': 'containerImages/README.md'
 theme:
   name: material
   features:
     - toc.follow
+    - toc.integrate
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.top
+    - content.action.edit
+#    - navigation.path
+#    - navigation.tabs
+#    - navigation.sections
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"

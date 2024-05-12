@@ -26,10 +26,10 @@ python3.12 -m pip install mkdocs-material
 
 ## TODO
 
-* [ ] add `index` pages per each dir to improve experience while navigating on the repo instead of on the site. Those
+* [x] add `index` pages per each dir to improve experience while navigating on the repo instead of on the site. Those
   index should not interfere with the mkdoc table of content
 * [ ] move code snipped in md files to independent files
 * [ ] order content menu
 * [ ] publish site
-* [ ] action to publish the site
+* [ ] action to publish the site when merged / commit on main
 * [ ] git hook for format the md files

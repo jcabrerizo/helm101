@@ -1,3 +1,5 @@
+https://github.com/jcabrerizo/k8s101/tree/main/docs/exercices/muschko
+
 # Certified Kubernetes Application Developer (CKAD) Study Guide
 
 by Benjamin Muschko
