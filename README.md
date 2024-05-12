@@ -22,8 +22,7 @@ python3.12 -m venv venv
 python3.12 -m pip install mkdocs-material
 ```
 
-[![Built with Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white)](https://squidfunk.github.io/mkdocs-material/)
-
+[![Built with Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?&logo=MaterialForMkDocs&logoColor=white)](https://squidfunk.github.io/mkdocs-material/) [![Build and publish mkdocs](https://github.com/jcabrerizo/k8s101/actions/workflows/build-and-publish-mkdocs.yaml/badge.svg?branch=main)](https://github.com/jcabrerizo/k8s101/actions/workflows/build-and-publish-mkdocs.yaml)
 ## TODO
 
 * [x] add `index` pages per each dir to improve experience while navigating on the repo instead of on the site. Those
