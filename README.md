@@ -1,4 +1,4 @@
-# Container 101
+# k8s 101
 
 > [!NOTE]
 > For reading the notes go to the [docs](./docs) dir or to the built site (TODO)

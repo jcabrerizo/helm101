@@ -1,4 +1,4 @@
-site_name: Containers 101
+site_name: k8s 101
 docs_dir: docs
 site_dir: ./site
 
