@@ -1,12 +1,15 @@
 # Kubernetes, Helm and other container-ish notes
 
-* [AWS: ECR & EKS + `eksctl`](aws/)
-* [Helm](./helm.md)
-* [Kubernetes & kubectl](docs/k8s/)
+* [AWS: ECR & EKS + `eksctl`](./aws/index.md)
+* [containerImages](./containerImages/README)
+* [Kubernetes & kubectl](./k8s/index.md)
+* [miscellanea](./miscellanea/index.md)
+* [tools](./tools/index.md)
+* [Helm](./tools/helm.md)
 
 ## Training
 
-1. [Muschko CKAD book](exercices/muschko)
+1. [exercises](./exercices/index.md)
 2. [Official Linux Foundation training LFD 259](https://training.linuxfoundation.org/training/kubernetes-for-developers/)
 3. [dgkanatsios/CKAD-exercises repo](https://github.com/dgkanatsios/CKAD-exercises/tree/main) ⭐️⭐️⭐️⭐️⭐️
 

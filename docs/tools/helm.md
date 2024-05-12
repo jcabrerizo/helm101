@@ -1,4 +1,4 @@
-# Helm notes
+# Helm
 
 Helm learning notes and POCs
 
