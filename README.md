@@ -30,6 +30,6 @@ python3.12 -m pip install mkdocs-material
   index should not interfere with the mkdoc table of content
 * [ ] move code snipped in md files to independent files
 * [ ] order content menu
-* [ ] publish site
-* [ ] action to publish the site when merged / commit on main
+* [x] publish site -> https://jcabrerizo.github.io/k8s101/
+* [x] action to publish the site when merged / commit on main -> https://github.com/jcabrerizo/k8s101/blob/main/.github/workflows/build-and-publish-mkdocs.yaml
 * [ ] git hook for format the md files
