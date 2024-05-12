@@ -23,6 +23,6 @@
   FROM docker.io/httpd:2.4
   RUN echo "Hello, World!" > /usr/local/apache2/htdocs/index.html
   ```
-- [ ] Add in `helm repo login` commands examples of the repo url, as it's important
-- [ ] Generate better `README.md` files for the root of each dir.
+- [x] Add in `helm repo login` commands examples of the repo url, as it's important
+- [x] Generate better `README.md` files for the root of each dir.
 - [ ] Automate ^

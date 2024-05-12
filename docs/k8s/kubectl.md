@@ -5,6 +5,10 @@
 * https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands
 * https://kubernetes.io/docs/reference/kubectl/quick-reference/
 
+### Install `kubectl`
+
+https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
+
 ## Help
 
 This command describes the fields associated with each supported API resource
