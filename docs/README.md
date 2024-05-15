@@ -26,3 +26,4 @@
 - [x] Add in `helm repo login` commands examples of the repo url, as it's important
 - [x] Generate better `README.md` files for the root of each dir.
 - [ ] Automate ^
+- [ ] Think about making containers a sub dir and add other material to this repo?
