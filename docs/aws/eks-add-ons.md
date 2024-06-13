@@ -43,3 +43,17 @@ helm install \
   --namespace $CHART_NAMESPACE \
   $CHART_RELEASE_NAME $CHART_PATH >|  ${CHART_NAME}-${CHART_VERSION}.dryrun.yaml
 ```
+
+## List add-ons
+```shell
+aws eks describe-addon-versions \
+  --kubernetes-version 1.29 \
+  --addon-name snyk_runtime-sensor \
+  --query 'addons[].{MarketplaceProductUrl: marketplaceInformation.productUrl, Name: addonName, Owner: owner Publisher: publisher, Type: type}' \
+  --output table
+```
+or using `eksctl`
+
+```shell
+eksctl utils describe-addon-versions --kubernetes-version 1.29 --region us-east-1
+```
