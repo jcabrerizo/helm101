@@ -1,7 +1,7 @@
 # Kubernetes, Helm and other container-ish notes
 
 * [AWS: ECR & EKS + `eksctl`](./aws/index.md)
-* [containerImages](./containerImages/README)
+* [containerImages](./containerImages/README.md)
 * [Kubernetes & kubectl](./k8s/index.md)
 * [miscellanea](./miscellanea/index.md)
 * [tools](./tools/index.md)
